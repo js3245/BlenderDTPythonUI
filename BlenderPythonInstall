@@ -1,0 +1,27 @@
+import subprocess
+import sys
+import os
+
+## Upgrade pip
+#subprocess.check_call([sys.executable, "-m", "pip", "install", "--upgrade", "pip"])
+
+#subprocess.check_call([sys.executable, "-m", "pip", "install", "--upgrade", "pandas"])
+
+#print(sys.path)
+
+# Path to the local user site-packages directory
+user_site_packages = os.path.expanduser("~/.local/lib/python3.11/site-packages")
+
+## Path to Blender's Python executable
+#blender_python = "/Applications/Blender.app/Contents/Resources/4.2/python/bin/python3.11"
+
+## Reinstall pandas in Blender's Python environment
+#subprocess.check_call([blender_python, "-m", "pip", "install", "--upgrade", "--target", "/Applications/Blender.app/Contents/Resources/4.2/python/lib/python3.11/site-packages", "pandas"])
+
+# Ensure the directory exists
+os.makedirs(user_site_packages, exist_ok=True)
+
+## Install pvlib into the user-writable directory
+#subprocess.check_call([sys.executable, "-m", "pip", "install", "--upgrade", "--target", user_site_packages, "pvlib"])
+
+#subprocess.check_call([sys.executable, "-m", "pip", "install", "--upgrade", "--target", user_site_packages, "paho-mqtt"])
